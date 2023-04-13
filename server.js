@@ -42,7 +42,7 @@ app.post('/api/create_link_token', async (req, res, next) => {
   if (req.body.address === 'localhost') {
     payload = {
       user: {client_user_id: req.sessionID},
-      client_name: 'Plaid Tiny Quickstart - React Native',
+      client_name: 'CrossPay',
       language: 'en',
       products: ['auth'],
       country_codes: ['US'],
@@ -52,7 +52,7 @@ app.post('/api/create_link_token', async (req, res, next) => {
     //Payload if running Android
     payload = {
       user: {client_user_id: req.sessionID},
-      client_name: 'Plaid Tiny Quickstart - React Native',
+      client_name: 'CrossPay',
       language: 'en',
       products: ['auth'],
       country_codes: ['US'],
@@ -80,7 +80,7 @@ app.post('/api/balance', async (req, res, next) => {
   const access_token = req.session.access_token;
   const balanceResponse = await client.accountsBalanceGet({access_token});
   res.json({
-    Balance: balanceResponse.data,
+    accounts: balanceResponse.data,
   });
 });
 

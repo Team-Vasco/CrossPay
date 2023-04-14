@@ -12,7 +12,7 @@ You'll specifically need to follow the instructions under "React Native CLI Quic
 
 Install dependencies:  
 Ensure your Node version is 16.14.0. Next, run `npm install` in the root folder. 
-Navigate to the ios/ folder and run `pod install` to install all necessary iOS dependencies or `bundle install` if necessary gem dependencies don't exist.
+Navigate to the ios/ folder and run `pod install` to install all necessary iOS dependencies or `bundle install` and then `pod install` if necessary gem dependencies don't exist.
 
 Start the backend server:
 In a terminal window, run `node server.js` in the root folder. This will run a local server on port 8080.

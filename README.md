@@ -14,6 +14,9 @@ Install dependencies:
 Ensure your Node version is 16.14.0. Next, run `npm install` in the root folder. 
 Navigate to the ios/ folder and run `pod install` to install all necessary iOS dependencies or `bundle install` and then `pod install` if necessary gem dependencies don't exist.
 
+Insert PLAID Variables:
+Inside the .env.example file is 5 variables relating to creating a PLAID connection. Two of these, 'PLAID_CLIENT_ID' and 'PLAID_SECRET' need to be filled with your instances. Once these are filled with your Client ID and Secret, create a .env file and copy the contents of .env.example into the .env file.
+
 Start the backend server:
 In a terminal window, run `node server.js` in the root folder. This will run a local server on port 8080.
 
